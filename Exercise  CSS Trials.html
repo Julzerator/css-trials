@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-01 -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exercise: CSS Trials</title>
+  
+
+  
+  
+
+  
+  <link href="./Exercise  CSS Trials_files/css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./Exercise  CSS Trials_files/hackbright.css" type="text/css">
+  
+
+  
+
+  
+    <link rel="top" title="Hackbright Fellowship" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#"> 
+
+  
+  <script src="./Exercise  CSS Trials_files/modernizr.min.js"></script>
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">.MathJax_Preview .MJXc-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXc-script {font-size: .8em}
+.MJXc-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXc-bold {font-weight: bold}
+.MJXc-italic {font-style: italic}
+.MJXc-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-largeop {font-size: 150%}
+.MJXc-largeop.MJXc-int {vertical-align: -.2em}
+.MJXc-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXc-display {display: block; text-align: center; margin: 1em 0}
+.MJXc-math span {display: inline-block}
+.MJXc-box {display: block!important; text-align: center}
+.MJXc-box:after {content: " "}
+.MJXc-rule {display: block!important; margin-top: .1em}
+.MJXc-char {display: block!important}
+.MJXc-mo {margin: 0 .15em}
+.MJXc-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXc-denom {display: inline-table!important; width: 100%}
+.MJXc-denom > * {display: table-row!important}
+.MJXc-surd {vertical-align: top}
+.MJXc-surd > * {display: block!important}
+.MJXc-script-box > *  {display: table!important; height: 50%}
+.MJXc-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXc-script-box > *:last-child > * {vertical-align: bottom}
+.MJXc-script-box > * > * > * {display: block!important}
+.MJXc-mphantom {visibility: hidden}
+.MJXc-munderover {display: inline-table!important}
+.MJXc-over {display: inline-block!important; text-align: center}
+.MJXc-over > * {display: block!important}
+.MJXc-munderover > * {display: table-row!important}
+.MJXc-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXc-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXc-mtr {display: table-row!important}
+.MJXc-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXc-mtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-mlabeledtr {display: table-row!important}
+.MJXc-mlabeledtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mlabeledtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXc-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXc-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXc-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXc-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXc-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXc-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXc-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXc-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXc-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXc-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_CHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="wy-body-for-nav" role="document"><div id="MathJax_Message" style="display: none;"></div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <p class="project">Hackbright Fellowship Spring 2015</p>
+          <a href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#">Exercise: CSS Trials</a>
+        
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#">Exercise: CSS Trials</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-1-hello-world">Trial 1: Hello World</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#expected-tags">Expected Tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#expected-css-styles">Expected CSS Styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#style-notes">Style Notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-2-the-red-div">Trial 2: The Red Div</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id1">Expected Tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id6">Expected CSS Styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id7">Style Notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#layout-notes">Layout Notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-3-the-flag">Trial 3: The Flag</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id8">Expected tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id14">Style notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id15">Layout notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#general-notes">General notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-4-the-flag-returns">Trial 4: The Flag Returns</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id16">Expected tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id22">Expected css styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id23">Style notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id24">Layout notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-5-mixing-and-matching">Trial 5: Mixing and matching</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id25">Expected tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id31">Expected css styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id33">Style notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id34">Layout notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-6-mixing-and-mixing">Trial 6: Mixing and mixing</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id35">Expected tags</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id41">Expected css styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id45">Style notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id46">Layout notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-7-vertical-alinging">Trial 7: Vertical Alinging</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id47">Expected CSS Styles</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id48">Style Notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id49">Layout Notes</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#further-study">Further Study</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#">Exercise: CSS Trials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+          <div role="main" class="document">
+            
+  <div class="section" id="exercise-css-trials">
+<h1>Exercise: CSS Trials<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#exercise-css-trials" title="Permalink to this headline">¶</a></h1>
+<p>Before you are a series of CSS layout tasks, increasing in order of
+difficulty. For this exercise, recreate the layout presented in the
+screenshot of each task.</p>
+<p><strong>After each task, grab a TA or instructor for a code review.
+This is especially important for this exercise – there are lots of
+ways you could do this and we want to discuss best practices with you.</strong></p>
+<ul class="simple">
+<li><a class="reference internal" href="./Exercise  CSS Trials_files/Exercise  CSS Trials.html">Trial 01</a> - Hello World</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-02">Trial 02</a> - The Red DIV</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-03">Trial 03</a> - The Flag</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-04">Trial 04</a> - The Flag Returns</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-05">Trial 05</a> - Mixing and Matching</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-06">Trial 06</a> - Mixing and Mixing</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-07">Trial 07</a> - Vertical Aligning</li>
+</ul>
+</div>
+<div class="section" id="trial-1-hello-world">
+<span id="trial-01"></span><h1>Trial 1: Hello World<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-1-hello-world" title="Permalink to this headline">¶</a></h1>
+<p>This is the simplest of tasks. We’ll start with a basic ‘hello world’ as
+the heading of the page. In setting this up, make sure you have all the
+necessary tags to be valid html.</p>
+<div class="figure" id="id51">
+<img alt="_images/001.png" src="./Exercise  CSS Trials_files/001.png">
+<p class="caption"><span class="caption-text">Font example</span></p>
+</div>
+<div class="section" id="expected-tags">
+<h2>Expected Tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#expected-tags" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">h1</a></li>
+</ul>
+</div>
+<div class="section" id="expected-css-styles">
+<h2>Expected CSS Styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#expected-css-styles" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a></li>
+</ul>
+</div>
+<div class="section" id="style-notes">
+<h2>Style Notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#style-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Pay attention to the font in the screenshot.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trial-2-the-red-div">
+<span id="trial-02"></span><h1>Trial 2: The Red Div<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-2-the-red-div" title="Permalink to this headline">¶</a></h1>
+<p>For our purposes, the div is the basic unit of layout in HTML. To make
+it really useful, we first need to bend it to our will. The first steps
+towards that are fixing it in size, shape and color. Place a basic red
+div on your page.</p>
+<div class="figure" id="id52">
+<img alt="_images/002.png" src="./Exercise  CSS Trials_files/002.png">
+<p class="caption"><span class="caption-text">Single red div</span></p>
+</div>
+<div class="section" id="id1">
+<h2>Expected Tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>Expected CSS Styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2>Style Notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The background color of the div is a solid red, #FF0000 in hex</li>
+</ul>
+</div>
+<div class="section" id="layout-notes">
+<h2>Layout Notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#layout-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The dimensions of the div are 350x240px</li>
+<li>Notice that the div is flush against the window’s edge. Try to match
+that. (Hint: use the inspector tool in your browser to find out why it’s not
+flush to begin with.)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trial-3-the-flag">
+<span id="trial-03"></span><h1>Trial 3: The Flag<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-3-the-flag" title="Permalink to this headline">¶</a></h1>
+<p>As a block element, the natural behavior of the div is to stack on top
+of other block elements. We’ll abuse this behavior to create a German
+flag.</p>
+<div class="figure" id="id53">
+<img alt="_images/003.png" src="./Exercise  CSS Trials_files/003.png">
+<p class="caption"><span class="caption-text">German flag</span></p>
+</div>
+<div class="section" id="id8">
+<h2>Expected tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>Style notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The top bar is black</li>
+<li>The middle bar is red</li>
+<li>The bottom bar is ‘gold’, defined as <code class="docutils literal"><span class="pre">#ffd700</span></code></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>Layout notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Each of the bars is the same thickness</li>
+<li>The width of the flag is 500px</li>
+<li>The height of the flag is 300px</li>
+</ul>
+</div>
+<div class="section" id="general-notes">
+<h2>General notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#general-notes" title="Permalink to this headline">¶</a></h2>
+<p>You will want to do some research about “class” and “id” selectors.</p>
+</div>
+</div>
+<div class="section" id="trial-4-the-flag-returns">
+<span id="trial-04"></span><h1>Trial 4: The Flag Returns<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-4-the-flag-returns" title="Permalink to this headline">¶</a></h1>
+<p>Given the previous exercise, it is unnatural to force divs to stack up
+next to each other horizontally. However, ‘inline’ elements such as
+spans do this naturally, but refuse to allow us to change their size and
+shape.</p>
+<p>We can get the best of both worlds by marking an element as an
+<code class="docutils literal"><span class="pre">inline-block</span></code>. This gives us an element we can reshape but stacks
+horizontally instead of vertically against other inline elements by
+default.</p>
+<p>Use this mechanism to build an Andorran flag.</p>
+<div class="figure" id="id54">
+<img alt="_images/004.png" src="./Exercise  CSS Trials_files/004.png">
+<p class="caption"><span class="caption-text">Andorran Flag</span></p>
+</div>
+<div class="section" id="id16">
+<h2>Expected tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id16" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>Expected css styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id22" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display:
+inline-block</a></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h2>Style notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id23" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The left bar is dark blue (hex color: #3e2d8b)</li>
+<li>The middle bar is yellow</li>
+<li>The right bar is red (hex color: #d81f3e)</li>
+<li>Note there is a 5px black border running around the flag.</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>Layout notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id24" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Each of the bars is the same width</li>
+<li>There should be no gaps between bars</li>
+<li>The width of the flag is 300px</li>
+<li>The proportions of the flag are 3:2</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>What is that extra space??</strong></p>
+<p class="last">Don’t just apply a negative padding, margin, or border value, find out what’s happening.
+What properties are associated with inline elements and why? Discover several ways of
+overcoming this odd “bug” (it’s not a bug) and discuss their benefits and drawbacks.</p>
+</div>
+</div>
+</div>
+<div class="section" id="trial-5-mixing-and-matching">
+<span id="trial-05"></span><h1>Trial 5: Mixing and matching<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-5-mixing-and-matching" title="Permalink to this headline">¶</a></h1>
+<p>We’re going to mix and match both the horizontal and vertical stacking
+behavior in this exercise.</p>
+<p>Using divs, create two vertically stacked divs. Inside each of these
+divs, place two horizontally adjacent divs.</p>
+<p>As you do this, use the css margin to make sure things are evenly
+spaced.</p>
+<div class="figure" id="id55">
+<img alt="_images/005.png" src="./Exercise  CSS Trials_files/005.png">
+<p class="caption"><span class="caption-text">Two vertically stacked divs each with two black divs centered within them</span></p>
+</div>
+<div class="section" id="id25">
+<h2>Expected tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id25" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a></li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h2>Expected css styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id31" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display:
+inline-block</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top">margin-top</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a></li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h2>Style notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id33" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The top bar is red</li>
+<li>The bottom bar is blue</li>
+<li>The inner boxes are black</li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h2>Layout notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id34" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The two vertically stacked bars are 350x200 px</li>
+<li>The inner boxes are all 100x100 px</li>
+<li>The inner boxes are evenly spaced from the edges of the outer boxes</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trial-6-mixing-and-mixing">
+<span id="trial-06"></span><h1>Trial 6: Mixing and mixing<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-6-mixing-and-mixing" title="Permalink to this headline">¶</a></h1>
+<p>We’re doing basically the same thing as before, but this time,
+everything is horizontal.</p>
+<div class="figure" id="id56">
+<img alt="_images/006.png" src="./Exercise  CSS Trials_files/006.png">
+<p class="caption"><span class="caption-text">Two adjacent divs each with two black divs centered within them</span></p>
+</div>
+<div class="section" id="id35">
+<h2>Expected tags<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id35" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a></li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h2>Expected css styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id41" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display:
+inline-block</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top">margin-top</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left">margin-left</a></li>
+</ul>
+</div>
+<div class="section" id="id45">
+<h2>Style notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id45" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The left bar is red</li>
+<li>The right bar is blue</li>
+<li>The inner boxes are black</li>
+</ul>
+</div>
+<div class="section" id="id46">
+<h2>Layout notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id46" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The two horizontally stacked bars are 400x200 px</li>
+<li>The inner boxes are all 100x100 px</li>
+<li>The inner boxes are evenly spaced from the edges of the outer boxes</li>
+<li><strong>Important!</strong> In our screenshot, there is no gap between the left
+and the right bar. Figure out how to do this. (Hint: this is not a
+CSS problem)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trial-7-vertical-alinging">
+<span id="trial-07"></span><h1>Trial 7: Vertical Alinging<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#trial-7-vertical-alinging" title="Permalink to this headline">¶</a></h1>
+<p>Here’s a challenge with all the layout techniques you’ve seen so far,
+and a new one, <cite>vertical-align</cite></p>
+<div class="figure" id="id57">
+<img alt="_images/007.png" src="./Exercise  CSS Trials_files/007.png">
+<p class="caption"><span class="caption-text">Gray boxes with different vertical alignments</span></p>
+</div>
+<div class="section" id="id47">
+<h2>Expected CSS Styles<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id47" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-align</a></li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h2>Style Notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id48" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The dark background boxes are dark grey, <cite>#555555</cite> in hex.</li>
+<li>The foreground boxes light grey, <cite>#cccccc</cite> in hex.</li>
+</ul>
+</div>
+<div class="section" id="id49">
+<h2>Layout Notes<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#id49" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The background boxes are 130px high and 600px wide</li>
+<li>The background boxes have a 10px margin between them.</li>
+<li>The inner boxes are divided as evenly across the horizontal width as
+possible and have a 6px margin between them</li>
+<li>The middle row of boxes alternate between 100px and 75px in height.</li>
+<li>The box on the bottom left is 35px high.</li>
+</ul>
+<p>Try using percents instead of pixel widths. Which do you prefer? When would you want to use pixels over
+percentages and vice versa?</p>
+</div>
+<div class="section" id="further-study">
+<h2>Further Study<a class="headerlink" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/#further-study" title="Permalink to this headline">¶</a></h2>
+<p>Head on over to the <a class="reference external" href="http://fellowship.hackbrightacademy.com/exercises/css-trials/further-study.html">Further Study</a> section to style
+the Ubermelon Order Form.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./Exercise  CSS Trials_files/jquery.js"></script>
+      <script type="text/javascript" src="./Exercise  CSS Trials_files/underscore.js"></script>
+      <script type="text/javascript" src="./Exercise  CSS Trials_files/doctools.js"></script>
+      <script type="text/javascript" src="./Exercise  CSS Trials_files/MathJax.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./Exercise  CSS Trials_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+
+</body></html>
